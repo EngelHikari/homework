@@ -56,25 +56,40 @@
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+1. с помощью конфигуратора на сайте Zabbix на хосты  скачиваю и устанавливаю репозиторий командами
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
+   wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
+   dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+
+   apt update
+3. устанавливаю Zabbix агент командой
+
+   apt install zabbix-agent
+   
+5. запускаю Zabbix и настраиваю его запуску при загрузке ос команндами
+
+   systemctl restart zabbix-agent
+   
+   systemctl enable zabbix-agent
+6. прописываю в настройках агента адрес сервера
+
+   nano /etc/zabbix/zabbix-agentd.conf
+  
+7. перезапускаю агенты заббикса
+
+   systemctl restart zabbix-agent
+8. проверяю работу в веб версии
+
+
+![Снимок экрана 2024-06-20 202746](https://github.com/EngelHikari/homework/assets/165402013/18dbebdc-4a9f-4f3c-8f26-a0b19612938a)
+![Снимок экрана 2024-06-20 203317](https://github.com/EngelHikari/homework/assets/165402013/42e050e9-a468-4ab8-841a-c6ca01cbe8a4)
+![Снимок экрана 2024-06-20 203410](https://github.com/EngelHikari/homework/assets/165402013/6633ae91-9aa0-4f6f-abf8-58d8ae7d08da)
+![Снимок экрана 2024-06-20 203531](https://github.com/EngelHikari/homework/assets/165402013/fdc50410-ebee-4ec2-ae11-ccb0c7acad08)
+![Снимок экрана 2024-06-20 203553](https://github.com/EngelHikari/homework/assets/165402013/9fe7d7de-9755-42d4-a783-a30198b1ef37)
+
+
 
 
 ---
