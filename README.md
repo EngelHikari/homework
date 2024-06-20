@@ -46,10 +46,11 @@
    systemctl restart zabbix-server zabbix-agent apache2
    
 
-
-
-
-
+![Снимок экрана 2024-06-20 183557](https://github.com/EngelHikari/homework/assets/165402013/dec69a5d-2026-4e3f-abef-8a0cf062c4f6)
+![Снимок экрана 2024-06-20 183711](https://github.com/EngelHikari/homework/assets/165402013/ca6e486f-11a4-44c6-87be-8e20e1c8f7a0)
+![Снимок экрана 2024-06-20 183755](https://github.com/EngelHikari/homework/assets/165402013/e07b70fd-eb4e-455e-8dd6-d715aab2a732)
+![Снимок экрана 2024-06-20 183839](https://github.com/EngelHikari/homework/assets/165402013/9c38a0db-7c7c-4de5-a085-3cabf45051e7)
+![Снимок экрана 2024-06-20 184627](https://github.com/EngelHikari/homework/assets/165402013/4144a84a-1ccf-4d21-ae1d-4db7bd330dee)
 
 ---
 
