@@ -24,25 +24,31 @@
 
 ### Задание 1
 
-`Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
+1. устанавливаю Postgres командой sudo apt install postgresql
+2. с помощью конфигуратора на сайте Zabbix скачиваю и устанавливаю репозиторий командами
+   wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+   dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+
+   apt update
+4.  устанавливаю Zabbix сервер, веб-интерфейс и агент командой
+   apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+5. создал базу данных командой
+   sudo -u postgres createuser --pwprompt zabbix
+   
+   sudo -u postgres createdb -O zabbix zabbix
+7. импортирую начальную схему
+   zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix 
+8. отредактирова zabbix_server.conf записав туда пароль
+9. запустил командой
+   systemctl restart zabbix-server zabbix-agent apache2
+   
+
+
+
+
 
 
 ---
